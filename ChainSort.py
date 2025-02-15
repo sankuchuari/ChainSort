@@ -77,7 +77,7 @@ def chain_sort(array):
 
 # 测试示例
 if __name__ == "__main__":
-    arr = print("排序前:", arr)
     arr = [2, 4, 1, 5, 8, 7, 3, 9, 9, 9, 11]
+    arr = print("排序前:", arr)
     chain_sort(arr)
     print("排序后:", arr)
