@@ -1,6 +1,7 @@
 # ChainSort
 一种链式排序方法
 
+提供了python和c++解决方案
 # 一、算法概要
 
 ## ChainSort 的主要思路是：
