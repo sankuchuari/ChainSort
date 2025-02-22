@@ -8,7 +8,7 @@ void ChainSort(int* array, int* lenArray)
     short lenChain = 0; 
     short head = 0;      //最小元素对应节点下标
     short end = 0;        //最大元素对应节点下标
-    short mid = 0;        //最大元素对应节点下标
+    short mid = 0;        //中值元素对应节点下标
     short pointer = -1; //临时遍历指针
     // 1. 构建有序链表
     for (int i = 0; i < *lenArray; i++)
