@@ -35,7 +35,7 @@ void ChainSort(vector<int>& vec)
                 chain[i][2] = -1;            // 后继为空
                 chain[subScript[2]][2] = i;   // 更新旧尾后继为新节点
                 subScript[2] = chain[subScript[2]][2]; // 更新尾指针
-                subScript[1] = chain[subScript[1]][2]; // 中值节点下移
+                subScript[1] = chain[subScript[1]][2]; // 中值下标下移
             }
             else if (vec[i] <= vec[chain[subScript[0]][1]])
             {
@@ -44,7 +44,7 @@ void ChainSort(vector<int>& vec)
                 chain[i][2] = subScript[0];
                 chain[subScript[0]][0] = i;
                 subScript[0] = chain[subScript[0]][0]; // 更新头指针
-                subScript[1] = chain[subScript[1]][0]; // 中值节点上移
+                subScript[1] = chain[subScript[1]][0]; // 中值下标上移
             }
             else if (vec[i] > vec[chain[subScript[0]][1]])
             {
@@ -62,7 +62,7 @@ void ChainSort(vector<int>& vec)
                     if (chain[pointer][0] != -1)
                         chain[chain[pointer][0]][2] = i;
                     chain[pointer][0] = i;
-                    subScript[1] = chain[subScript[1]][2];  // 中值节点下移
+                    subScript[1] = chain[subScript[1]][2];  // 中值下标下移
                 }
                 else
                 {
@@ -77,7 +77,7 @@ void ChainSort(vector<int>& vec)
                     if (chain[pointer][0] != -1)
                         chain[chain[pointer][0]][2] = i;
                     chain[pointer][0] = i;
-                    subScript[1] = chain[subScript[1]][0];  // 中值节点上移
+                    subScript[1] = chain[subScript[1]][0];  // 中值下标上移
                 }
             }
         }
